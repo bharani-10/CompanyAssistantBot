@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - LLM_MODEL=gemini-pro
+      - LLM_PROVIDER=gemini
+      - TEMPERATURE=0.7
+      - API_HOST=0.0.0.0
+      - API_PORT=8000
+      - PDF_DIRECTORY=.
+      - CHROMA_PERSIST_DIRECTORY=./chroma_db
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./*.pdf:/app/
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+
+  frontend:
+    build: .
+    ports:
+      - "8501:8501"
+    environment:
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - API_URL=http://backend:8000
+      - STREAMLIT_SERVER_HEADLESS=true
+    volumes:
+      - ./chroma_db:/app/chroma_db
+      - ./*.pdf:/app/
+    depends_on:
+      - backend
+    command: streamlit run app.py
+
+volumes:
+  chroma_db:
