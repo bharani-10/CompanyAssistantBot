@@ -209,6 +209,8 @@ API_PORT=8000
 # PDF location (default: current directory)
 PDF_DIRECTORY=.
 ```
+## 💻📃Test the app here 
+## https://companyassistantbot.streamlit.app/
 
 ## 📊 Key Features
 
