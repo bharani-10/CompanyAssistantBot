@@ -1,0 +1,170 @@
+{
+  "mission_20260506_215800": {
+    "mission_id": "mission_20260506_215800",
+    "created_at": "2026-05-06 21:58:00.289028",
+    "updated_at": "2026-05-06 21:58:25.436541",
+    "phase": "failed",
+    "progress": 75,
+    "dataset_path": "data/students_performance.csv",
+    "user_prompt": "Build a complete student performance prediction system with modern web interface, real-time predictions, and deployment configuration",
+    "backend_files": 0,
+    "frontend_files": 0,
+    "ml_files": 0,
+    "deployment_files": 0,
+    "total_files": 0,
+    "backend_status": "pending",
+    "frontend_status": "pending",
+    "ml_status": "pending",
+    "deployment_status": "pending",
+    "backend_builds": false,
+    "frontend_builds": false,
+    "ml_executes": false,
+    "dependencies_installed": false,
+    "logs": [
+      {
+        "timestamp": "2026-05-06 21:58:00.291342",
+        "agent": "SYSTEM",
+        "message": "\ud83d\ude80 REAL AUTONOMOUS SWARM ENGAGED - Starting actual project generation",
+        "phase": "initializing",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 21:58:00.292543",
+        "agent": "SYSTEM",
+        "message": "\ud83d\ude80 REAL AUTONOMOUS SWARM ENGAGED - Creating actual working project",
+        "phase": "initializing",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 21:58:00.296736",
+        "agent": "Analyst Agent",
+        "message": "\ud83d\udcca Analyzing dataset structure and detecting ML problem type",
+        "phase": "analyzing",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 21:58:00.298658",
+        "agent": "Architect Agent",
+        "message": "\ud83c\udfd7\ufe0f Designing complete system architecture with real technology stack",
+        "phase": "architecting",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 21:58:00.300953",
+        "agent": "SYSTEM",
+        "message": "\u274c Generation failed: 1 validation error for SystemArchitecture\ndatabase_schema\n  Field required [type=missing, input_value={'ml_pipeline': {'preproc... {'auto_scaling': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing - Attempting recovery",
+        "phase": "failed",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 21:58:00.304595",
+        "agent": "SYSTEM",
+        "message": "\u274c PROJECT GENERATION INCOMPLETE - Validation failed",
+        "phase": "failed",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 21:58:00.305144",
+        "agent": "SYSTEM",
+        "message": "\u274c MISSION FAILED - Validation incomplete",
+        "phase": "failed",
+        "level": "INFO",
+        "data": null
+      }
+    ],
+    "errors": [],
+    "retries": 0,
+    "max_retries": 3,
+    "project_path": "generated_projects\\recovery_20260506_215800"
+  },
+  "mission_20260506_220644": {
+    "mission_id": "mission_20260506_220644",
+    "created_at": "2026-05-06 22:06:44.773194",
+    "updated_at": "2026-05-06 22:06:44.836387",
+    "phase": "failed",
+    "progress": 75,
+    "dataset_path": "data/students_performance.csv",
+    "user_prompt": "Build a complete student performance prediction system with a modern web interface, API endpoints, and deployment-ready configuration. Include data visualization, model explanations, and batch prediction capabilities.",
+    "backend_files": 0,
+    "frontend_files": 0,
+    "ml_files": 0,
+    "deployment_files": 0,
+    "total_files": 0,
+    "backend_status": "pending",
+    "frontend_status": "pending",
+    "ml_status": "pending",
+    "deployment_status": "pending",
+    "backend_builds": false,
+    "frontend_builds": false,
+    "ml_executes": false,
+    "dependencies_installed": false,
+    "logs": [
+      {
+        "timestamp": "2026-05-06 22:06:44.778399",
+        "agent": "SYSTEM",
+        "message": "\ud83d\ude80 REAL AUTONOMOUS SWARM ENGAGED - Starting actual project generation",
+        "phase": "initializing",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 22:06:44.783483",
+        "agent": "SYSTEM",
+        "message": "\ud83d\ude80 REAL AUTONOMOUS SWARM ENGAGED - Creating actual working project",
+        "phase": "initializing",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 22:06:44.808761",
+        "agent": "Analyst Agent",
+        "message": "\ud83d\udcca Analyzing dataset structure and detecting ML problem type",
+        "phase": "analyzing",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 22:06:44.814159",
+        "agent": "Architect Agent",
+        "message": "\ud83c\udfd7\ufe0f Designing complete system architecture with real technology stack",
+        "phase": "architecting",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 22:06:44.818918",
+        "agent": "SYSTEM",
+        "message": "\u274c Generation failed: 1 validation error for SystemArchitecture\ndatabase_schema\n  Field required [type=missing, input_value={'ml_pipeline': {'preproc... {'auto_scaling': True}}, input_type=dict]\n    For further information visit https://errors.pydantic.dev/2.12/v/missing - Attempting recovery",
+        "phase": "failed",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 22:06:44.830980",
+        "agent": "SYSTEM",
+        "message": "\u274c PROJECT GENERATION INCOMPLETE - Validation failed",
+        "phase": "failed",
+        "level": "INFO",
+        "data": null
+      },
+      {
+        "timestamp": "2026-05-06 22:06:44.833924",
+        "agent": "SYSTEM",
+        "message": "\u274c MISSION FAILED - Validation incomplete",
+        "phase": "failed",
+        "level": "INFO",
+        "data": null
+      }
+    ],
+    "errors": [],
+    "retries": 0,
+    "max_retries": 3,
+    "project_path": "generated_projects\\recovery_20260506_220644"
+  }
+}
