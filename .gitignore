@@ -77,3 +77,20 @@ conversation_logs/
 
 # Large files
 *.zip
+# Node modules
+node_modules/
+
+# Model files (optional)
+*.pkl
+*.joblib
+*.h5
+*.pt
+
+# Streamlit
+.streamlit/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Mac/Linux hidden files
+*.DS_Store
