@@ -210,7 +210,7 @@ API_PORT=8000
 PDF_DIRECTORY=.
 ```
 ## 💻📃Test the app here 
-## https://companyassistantbot.streamlit.app/
+📌https://companyassistantbot.streamlit.app/
 
 ## 📊 Key Features
 
