@@ -54,7 +54,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # API configuration
-API_URL = os.getenv("API_URL", "http://localhost:8000")
+API_URL = "https://companyassistantbot-backend.onrender.com"
 
 # Initialize session state
 if "messages" not in st.session_state:
