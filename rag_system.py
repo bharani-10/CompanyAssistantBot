@@ -1,7 +1,7 @@
 """
 RAG system for question answering using LangChain
 """
-from langchain_openai import ChatOpenAI
+
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_groq import ChatGroq
 from langchain_core.prompts import PromptTemplate
@@ -38,12 +38,7 @@ class RAGSystem:
                 google_api_key=api_key or os.getenv("GEMINI_API_KEY")
             )
         else:
-            self.llm = ChatOpenAI(
-                model_name=llm_model,
-                temperature=temperature,
-                openai_api_key=api_key or os.getenv("OPENAI_API_KEY"),
-                streaming=True
-            )
+            raise ValueError("Unsupported LLM provider")
         
         # Create the prompt template
         self.prompt_template = """Use the following pieces of context to answer the user question. 
