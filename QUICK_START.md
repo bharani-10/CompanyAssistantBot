@@ -1,123 +1,89 @@
-# 🚀 Quick Start Guide
+# 🚀 MetaMind OS - Quick Start Guide
 
-Get the RAG chatbot running in 10 minutes!
+**Autonomous AI Software Engineering System - Fast Setup**
 
-## Option 1: Automatic Setup (Recommended for Windows)
+## ⚡ Super Fast Start (30 seconds)
 
+### Option 1: Windows
 ```bash
-# 1. Double-click setup.bat
-# 2. The script will:
-#    - Create virtual environment
-#    - Install dependencies
-#    - Set up .env file
-#    - Initialize vector store from PDFs
-
-# 3. EDIT .env and add your OPENAI_API_KEY:
-#    Open .env in notepad and uncomment the line:
-#    OPENAI_API_KEY=sk-your-actual-key-here
-
-# 4. Verify setup worked:
-python utils.py
+# Double-click or run:
+start_fast.bat
 ```
 
-Output should show your PDFs and configuration.
-
-## Option 2: Manual Setup (All Platforms)
-
-### Step 1: Create Virtual Environment
+### Option 2: Python (Cross-platform)
 ```bash
-# Windows
-python -m venv venv
-venv\Scripts\activate
-
-# macOS/Linux
-python3 -m venv venv
-source venv/bin/activate
+python quick_start.py
 ```
 
-### Step 2: Install Dependencies
+### Option 3: Manual (if above fails)
 ```bash
-pip install -r requirements.txt
+cd backend
+pip install fastapi uvicorn pandas numpy scikit-learn python-multipart
+uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
 ```
 
-### Step 3: Setup Environment
+## 🧪 Test the System (Optional)
 ```bash
-# Copy template
-cp .env.example .env
-
-# Edit .env file - ADD YOUR OPENAI_API_KEY
-# Option A: OpenAI (best quality)
-#   Get key from: https://platform.openai.com/api-keys
-#   OPENAI_API_KEY=sk-...
-
-# Option B: Ollama (free, local)
-#   Download: https://ollama.ai
-#   Run: ollama pull mistral
-#   Update main.py to use Ollama
+python test_fast.py
 ```
 
-### Step 4: Initialize Vector Store
+## 🎯 Quick Demo
+
+1. **Open your browser**: http://localhost:8000/docs
+2. **Upload a CSV file** using the `/upload` endpoint
+3. **Generate a complete ML app** using `/generate-complete-project`
+   - dataset_path: `uploads/your_file.csv`
+   - user_prompt: `"Build a prediction system for my data"`
+
+## ⚡ What You Get (in seconds!)
+
+- ✅ **Complete FastAPI Backend** with ML endpoints
+- ✅ **React Frontend** with prediction interface  
+- ✅ **ML Training Pipeline** with auto-model selection
+- ✅ **Docker Deployment** configs
+- ✅ **GitHub Repository** structure
+- ✅ **Production-ready** code
+
+## 🔧 System URLs
+
+- **Backend API**: http://localhost:8000
+- **API Documentation**: http://localhost:8000/docs
+- **Frontend** (if available): http://localhost:3000
+
+## 📊 Example Test
+
+Try with the included student performance dataset:
+
+```json
+{
+  "dataset_path": "data/students_performance.csv",
+  "user_prompt": "Build a complete student performance prediction system with modern web interface and deployment configuration"
+}
+```
+
+## 🚀 Features
+
+- **⚡ FAST MODE**: Generates complete apps in seconds
+- **🤖 8-Agent Swarm**: Autonomous software engineering
+- **📁 Real Files**: Creates actual project structure
+- **🐳 Deploy Ready**: Docker, Hugging Face, Railway configs
+- **📚 Full Documentation**: README, API docs, guides
+
+## 🛠️ Troubleshooting
+
+**Backend won't start?**
 ```bash
-python -c "from document_ingestion import initialize_pipeline; initialize_pipeline('.', rebuild=True)"
+pip install --upgrade pip
+pip install fastapi uvicorn pandas numpy scikit-learn
 ```
 
-Wait for completion (~5 minutes). Creates `chroma_db/` folder with embeddings.
+**Port 8000 busy?**
+- Change port in `backend/app/main.py` line: `uvicorn.run(app, port=8001)`
 
-### Step 5: Start Backend
-```bash
-python main.py
-```
-
-You should see:
-```
-INFO:     Uvicorn running on http://0.0.0.0:8000
-```
-
-### Step 6: Start Frontend (New Terminal)
-```bash
-# Activate venv in new terminal first
-streamlit run app.py
-```
-
-Opens http://localhost:8501 automatically
-
-## Testing
-
-### Via Streamlit UI
-1. Open http://localhost:8501
-2. Ask: "What is the leave policy?"
-3. Should see answer + sources
-
-### Via API
-```bash
-curl -X POST http://localhost:8000/chat \
-  -H "Content-Type: application/json" \
-  -d '{"question": "What is the leave policy?"}'
-```
-
-## troubleshooting Quick Fixes
-
-| Problem | Fix |
-|---------|-----|
-| `ModuleNotFoundError` | Reinstall: `pip install -r requirements.txt` |
-| `OPENAI_API_KEY not found` | Edit `.env` and add your key, restart `main.py` |
-| `Cannot connect to API` | Check: Is `main.py` running? Is it on port 8000? |
-| `Vector store not found` | Run: `python -c "from document_ingestion import initialize_pipeline; initialize_pipeline('.', rebuild=True)"` |
-| `Slow responses` | Use `gpt-3.5-turbo` instead of `gpt-4` in .env |
-
-## Next Steps
-
-✅ Try these sample questions:
-- "How many days of leave do I get?"
-- "What is the WFH policy?"
-- "What is the notice period for resignation?"
-- "What password policy do we have?"
-- "Does SWS AI provide health insurance?"
-
-📚 Full documentation: See README.md
-
-💡 For production deployment: See "Deployment" section in README.md
+**Need help?**
+- Check the generated project's README.md
+- Look at API docs: http://localhost:8000/docs
 
 ---
 
-**That's it!** You have a working RAG chatbot.
+**🤖 This is an autonomous AI software engineering system. No manual coding required!**
