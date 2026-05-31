@@ -9,6 +9,7 @@ from typing import List, Dict
 import os
 from dotenv import load_dotenv
 import logging
+from knowledge_base import get_answer
 
 # Load environment variables
 load_dotenv()
@@ -80,11 +81,27 @@ async def health_check():
 # TEMP CHAT ROUTE
 @app.post("/chat", response_model=ChatResponse, tags=["Chat"])
 async def chat(request: ChatRequest):
-
-    return ChatResponse(
-        answer=f"You asked: {request.question}",
-        sources=[]
-    )
+    """Process user questions and return answers from knowledge base"""
+    try:
+        # Get answer from knowledge base
+        result = get_answer(request.question)
+        
+        # Format sources
+        sources = [{
+            "source": result.get("source", "Knowledge Base"),
+            "content": result.get("answer", "")[:200] + "..." if len(result.get("answer", "")) > 200 else result.get("answer", "")
+        }] if result.get("answer") != "I don't have that information in the knowledge base." else []
+        
+        return ChatResponse(
+            answer=result.get("answer", "I don't have that information"),
+            sources=sources
+        )
+    except Exception as e:
+        logger.error(f"Error processing chat: {str(e)}")
+        return ChatResponse(
+            answer=f"Error processing your question: {str(e)}",
+            sources=[]
+        )
 
 
 # DOCUMENTS ROUTE
